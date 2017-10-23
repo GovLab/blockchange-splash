@@ -1,19 +1,12 @@
 .top-section {
   margin-top: -50px;
   background-color: $purple;
-  &__img-container {
-
+  &__logo {
     @include breakpoint($medium) {
-      padding-top: 70px;
-      padding-bottom: 70px;
-      padding-left: 250px;
-      padding-right: 250px;
+      padding: 70px 250px;
     };
     @include breakpoint($small-only) {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 50px 0;
     };
     @include breakpoint($large) {
       padding: 120px;
@@ -26,13 +19,59 @@
         display: none;
       };
       @include breakpoint($large) {
-        display: inline;
+        display: block;
       };
     }
     .sm-img {
       @include breakpoint($large) {
         display: none;
       };
+    }
+  }
+
+  &__text {
+    font-family: serif;
+    font-size: 1.2rem;
+    color: $yellow;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: left;
+    span {
+      font-size: 1.5rem;
+      @include breakpoint($small-only) {
+        font-size: 1.4rem;
+      };
+    }
+    @include breakpoint($small-only) {
+      font-size: 1.1rem;
+    };
+    @include breakpoint($medium) {
+      padding-left: 50px;
+      padding-right: 50px;
+    };
+    @include breakpoint($large) {
+      padding-left: 0;
+      padding-right: 0;
+    };
+  }
+}
+
+.bg-panel {
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    color: white;
+    background-color: rgba(darken($purple, 3), .75);
+
+    @include breakpoint($medium) { padding: 50px; }
+    @include breakpoint($small-only) { padding: 30px; }
+    @include breakpoint($large) { padding: 70px; }
+
+    ul {
+      li {
+        padding-bottom: 20px;
+      }
     }
   }
 }
