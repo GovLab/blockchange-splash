@@ -1,0 +1,38 @@
+.top-section {
+  margin-top: -50px;
+  background-color: $purple;
+  &__img-container {
+
+    @include breakpoint($medium) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      padding-left: 250px;
+      padding-right: 250px;
+    };
+    @include breakpoint($small-only) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 0;
+      padding-right: 0;
+    };
+    @include breakpoint($large) {
+      padding: 120px;
+    };
+    .lg-img {
+      @include breakpoint($small-only) {
+        display: none;
+      };
+      @include breakpoint($medium) {
+        display: none;
+      };
+      @include breakpoint($large) {
+        display: inline;
+      };
+    }
+    .sm-img {
+      @include breakpoint($large) {
+        display: none;
+      };
+    }
+  }
+}
