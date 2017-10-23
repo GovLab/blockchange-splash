@@ -153,7 +153,10 @@
         margin-bottom: 5px;
         padding: 5px 10px;
         &:hover {
-          background-color: darken($light-purple, 10%);
+          background-color: $purple;
+          color: white;
+          border-color: $purple;
+          // transition: all .6s ease;
         }
       }
     }

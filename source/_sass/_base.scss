@@ -5,7 +5,6 @@ body {
   // background-color: transparent;
   &__button {
     color: $yellow;
-    // font-size: 2rem;
   }
   &__logo {
     position: relative;
@@ -23,18 +22,40 @@ body {
 }
 
 .footer {
-  h2 {margin: 1em 0;}
   padding-top: 40px;
-  &__nav {
-    > a {
-      text-align: left;
-      display: block;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-      padding: 5px;
+  &__content {
+    text-align: center;
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding-bottom: 20px;
+    }
+    img {
+      padding-bottom: 70px;
+      opacity: .5;
+      transition: all .4s ease;
+      border: dashed;
+      border-color: transparent;
       &:hover {
-        text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 1;
+        transition: all .4s ease;
       }
+      @include breakpoint($large) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.copyright {
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  &__cc-badge {
+    @include breakpoint($small-only) {
+      display: inline;
     }
   }
 }
