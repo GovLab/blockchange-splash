@@ -1,4 +1,4 @@
-# blockchange-splashpage
+# blockchange-splash
 
 ### Prerequisites
 - [jekyll](https://jekyllrb.com/)

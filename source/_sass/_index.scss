@@ -75,3 +75,87 @@
     }
   }
 }
+
+.divider {
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 200;
+    @include breakpoint($small-only) {
+      font-size: 1.8rem;
+    }
+  }
+  &--purple {
+    color: $yellow;
+    background-color: $purple;
+  }
+}
+
+.page-section {
+  color: lighten($purple, 10);
+  font-weight: 200;
+  a {
+    border-bottom: 1px solid darken($light-yellow, 25%);
+    &:hover {
+      text-decoration: none;
+      background-color: darken($light-yellow, 15%);
+      border-bottom: 1px solid darken($light-yellow, 40%);
+    }
+  }
+  .content {
+    h3  {
+      font-size: 1.5rem;
+      font-weight: 200;
+      @include breakpoint($small-only) {
+        font-size: 1.8rem;
+      }
+    }
+    padding-left: 60px;
+    padding-right: 60px;
+    @include breakpoint($small-only) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    ul {
+      padding-left: 18px;
+      li {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &--yellow {
+    background-color: $light-yellow;
+  }
+
+  &--blue {
+    background-color: $light-purple;
+    .contact {
+      text-align: center;
+      h3 {
+        text-transform: none;
+        font-weight: 200;
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      p {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+      }
+
+      .button {
+        border-bottom: none;
+        background-color: transparent;
+        font-weight: 500;
+        border: 2px solid;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        &:hover {
+          background-color: darken($light-purple, 10%);
+        }
+      }
+    }
+  }
+}
