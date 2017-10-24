@@ -1,15 +1,119 @@
 .top-section {
   margin-top: -50px;
   background-color: $purple;
+  position: relative;
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), $purple);
+    z-index: 1;
+  }
+
+  @keyframes cf3FadeInOut {
+    0% {
+    opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+  }
+
+  #cf {
+    position: absolute;
+    // margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
+  }
+
+  #cf img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #cf img:nth-of-type(1) {
+    animation-delay: 2s;
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+  }
+  #cf img:nth-of-type(2) {
+    animation-delay: 2s;
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    display: none;
+
+    top: 100px;
+    bottom: 0;
+    left: 100px;
+    right: 0;
+    @include breakpoint($small-only) {
+      top:-20px;
+      left:-20px;
+    };
+  }
+
+  // .bg {
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   // z-index: -1;
+  //   // display: none;
+  // }
+
+  // .bg-2 {
+  //   position: absolute;
+  //   top: -100px;
+  //   bottom: 0;
+  //   left: -100px;
+  //   right: 0;
+  //   // z-index: -1;
+  //   // display: none;
+  // }
+
+
   &__logo {
+    position: relative;
+    z-index: 2;
+
     @include breakpoint($medium) {
       padding: 70px 250px;
+      padding-top: 150px;
     };
     @include breakpoint($small-only) {
-      padding: 50px 0;
+      padding: 50px 10px;
+      padding-top: 120px;
     };
     @include breakpoint($large) {
       padding: 120px;
+      padding-top: 170px;
     };
     .lg-img {
       @include breakpoint($small-only) {
@@ -30,6 +134,8 @@
   }
 
   &__text {
+    position: relative;
+    z-index: 2;
     font-family: serif;
     font-size: 1.2rem;
     color: $yellow;
