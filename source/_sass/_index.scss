@@ -17,127 +17,7 @@
     z-index: 1;
   }
 
-  // http://css3.bradshawenterprises.com/cfimg/
-
-  @keyframes cf4FadeInOut {
-    0% {
-      opacity:1;
-    }
-    17% {
-      opacity:1;
-    }
-    25% {
-      opacity:0;
-    }
-    92% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-  #cf4a {
-    @include breakpoint($small-only) {
-      display: none;
-    };
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  #cf4a img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    animation-name: cf4FadeInOut;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 8s;
-
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-  }
-
-  #cf4a img:nth-of-type(1) {
-    animation-delay: 6s;
-  }
-  #cf4a img:nth-of-type(2) {
-    animation-delay: 4s;
-  }
-  #cf4a img:nth-of-type(3) {
-    animation-delay: 2s;
-  }
-  #cf4a img:nth-of-type(4) {
-    animation-delay: 0;
-  }
-
-
-  // http://jsfiddle.net/5M2PD/4/
-  .fadein {
-    @include breakpoint($small-only) {
-      display: none;
-    };
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-  }
-
-  .fadein img {
-      position: absolute;
-      top:0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      -webkit-animation-name: fade;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-duration: 6s;
-      animation-name: fade;
-      animation-iteration-count: infinite;
-      animation-duration: 6s;
-  }
-
-  @-webkit-keyframes fade {
-      0% {opacity: 0;}
-      20% {opacity: 1;}
-      33% {opacity: 1;}
-      53% {opacity: 0;}
-      100% {opacity: 0;}
-  }
-  @keyframes fade {
-      0% {opacity: 0;}
-      20% {opacity: 1;}
-      33% {opacity: 1;}
-      53% {opacity: 0;}
-      100% {opacity: 0;}
-  }
-
-  #f1 {
-  }
-
-  #f2 {
-      -webkit-animation-delay: -4s;
-  }
-  #f3 {
-      -webkit-animation-delay: -3s;
-  }
-  #f4 {
-      -webkit-animation-delay: -3s;
-      display: none;
-  }
-
-
-
-  // using https://codepen.io/leemark/pen/DvliI
+  // https://codepen.io/leemark/pen/DvliI
   ul {
     @include breakpoint($small-only) {
       display: none;
@@ -147,6 +27,7 @@
     padding: 0;
     position: relative;
   }
+
   li {
     position: absolute;
     top: 0;
@@ -154,8 +35,7 @@
     left:0;
     right:0;
   }
-  img{
-  }
+
   li:nth-child(4) {
     animation: xfade 16s 0s infinite;
   }
@@ -168,7 +48,8 @@
   li:nth-child(1) {
     animation: xfade 16s 12s infinite;
   }
-  @keyframes xfade{
+
+  @keyframes xfade {
     17% {
       opacity:1;
     }
@@ -179,7 +60,6 @@
       opacity:0;
     }
   }
-
 
   &__logo {
     position: relative;
@@ -195,7 +75,7 @@
     };
     @include breakpoint($large) {
       padding: 120px;
-      padding-top: 170px;
+      padding-top: 190px;
     };
     .lg-img {
       @include breakpoint($small-only) {

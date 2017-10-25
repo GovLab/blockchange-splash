@@ -1,31 +1,20 @@
 (function(){
-  // const bg = document.getElementsByClassName('bg');
-  // const bg2 = document.getElementsByClassName('bg-2');
+  const img2 = document.getElementsByClassName('img2');
+  const img3 = document.getElementsByClassName('img3');
+  const img4 = document.getElementsByClassName('img4');
 
-  // setTimeout(function(){
-  //   $(bg2).css("display", "block")
-  // }, 2000);
+  $(img2).css("display", "none");
+  $(img3).css("display", "none");
+  $(img4).css("display", "none");
 
-  // function fadeOut(image) {
-  //     setTimeout(function(){
-  //       $(image)
-  //         .animate({opacity: 0}, 100);
-  //       }, 200);
-  //   };
-  //
-  // function fadeIn(image) {
-  //   setTimeout(function(){
-  //     $(image).toggleClass("bg-2");
-  //     $(image).css("display", "block")
-  //       .animate({opacity: 1}, 400);
-  //   }, 400);
-  // };
+  function fadeIn(image, time, animate) {
+    setTimeout(function(){
+      $(image).fadeIn(animate);
+    }, time);
+  };
 
-
-  // $.when($.ajax(fadeOut(bg))).then(function () {
-  //   fadeIn(bg2)
-  // }).then(function() {
-  //   fadeOut(bg2)
-  // });
+  fadeIn(img2, 2800, 800);
+  fadeIn(img3, 6800, 800);
+  fadeIn(img4, 11000, 800);
 
 })();
