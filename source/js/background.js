@@ -1,10 +1,10 @@
 (function(){
   // const bg = document.getElementsByClassName('bg');
-  const bg2 = document.getElementsByClassName('bg-2');
+  // const bg2 = document.getElementsByClassName('bg-2');
 
-  setTimeout(function(){
-    $(bg2).css("display", "block")
-  }, 4000);
+  // setTimeout(function(){
+  //   $(bg2).css("display", "block")
+  // }, 2000);
 
   // function fadeOut(image) {
   //     setTimeout(function(){
