@@ -13,11 +13,20 @@ body {
   }
   &__logo {
     position: relative;
-    padding-right: 140px;
+    // padding-right: 140px;
     > img {
       height: 210%;
       position: absolute;
       top: -28px;
+      @include breakpoint($medium) {
+        right: 40%;
+      }
+      @include breakpoint($small-only) {
+        right: 35%;
+      }
+      @include breakpoint($large) {
+        right: 45%;
+      }
     }
   }
 }

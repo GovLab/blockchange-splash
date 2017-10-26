@@ -16,6 +16,8 @@ $medium: screen and (min-width: 40em);
 $medium-only: screen and (min-width: 40em) and (max-width: 63.9375em);
 $large: screen and (min-width: 64em);
 
+$between-small: screen and (min-width: 480px) and (max-width: 855px);
+
 @import 'breakpoint';
 @import 'base';
 @import 'index';

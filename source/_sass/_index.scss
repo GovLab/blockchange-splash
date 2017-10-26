@@ -1,10 +1,15 @@
 .top-section {
   margin-top: -50px;
-  background-color: $purple;
+  background-color: $purple!important;
   position: relative;
   @include breakpoint($small-only) {
-    background-image: url('/images/blocks-4.svg');
-    background-size: 160%;
+    background-size: 165%;
+  };
+  @include breakpoint($medium) {
+    background-size: 150%;
+  };
+  @include breakpoint($large) {
+    background-image: none!important;
   };
 
   .gradient {
@@ -18,9 +23,15 @@
   }
 
   // https://codepen.io/leemark/pen/DvliI
-  ul {
+  #xfade {
+    @include breakpoint($medium) {
+      display: none;
+    };
     @include breakpoint($small-only) {
       display: none;
+    };
+    @include breakpoint($large) {
+      display: block;
     };
     list-style: none;
     margin: 0;
@@ -28,7 +39,7 @@
     position: relative;
   }
 
-  li {
+  #xfade figure {
     position: absolute;
     top: 0;
     bottom:0;
@@ -36,17 +47,34 @@
     right:0;
   }
 
-  li:nth-child(4) {
+  #xfade img{
+    width: 100%;
+    height: auto;
+  }
+
+  figure:nth-child(4) {
     animation: xfade 16s 0s infinite;
+    -moz-animation: xfade 16s 0s infinite; /* Firefox */
+    -webkit-animation: xfade 16s 0s infinite;
+    -o-animation: xfade 16s 0s infinite;
   }
-  li:nth-child(3) {
+  figure:nth-child(3) {
     animation: xfade 16s 4s infinite;
+    -moz-animation: xfade 16s 4s infinite; /* Firefox */
+    -webkit-animation: xfade 16s 4s infinite;
+    -o-animation: xfade 16s 4s infinite;
   }
-  li:nth-child(2) {
+  figure:nth-child(2) {
     animation: xfade 16s 8s infinite;
+    -moz-animation: xfade 16s 8s infinite; /* Firefox */
+    -webkit-animation: xfade 16s 8s infinite;
+    -o-animation: xfade 16s 8s infinite;
   }
-  li:nth-child(1) {
+  figure:nth-child(1) {
     animation: xfade 16s 12s infinite;
+    -moz-animation: xfade 16s 12s infinite; /* Firefox */
+    -webkit-animation: xfade 16s 12s infinite;
+    -o-animation: xfade 16s 12s infinite;
   }
 
   @keyframes xfade {
@@ -61,12 +89,64 @@
     }
   }
 
+  @-webkit-keyframes xfade{ /* Safari and Chrome */
+    17% {
+      opacity:1;
+    }
+    25% {
+      opacity:0;
+    }
+    92% {
+      opacity:0;
+    }
+  }
+
+ @-moz-keyframes xfade {
+   17% {
+     opacity:1;
+   }
+   25% {
+     opacity:0;
+   }
+   92% {
+     opacity:0;
+   }
+ }
+
+ @-o-keyframes xfade {
+   17% {
+     opacity:1;
+   }
+   25% {
+     opacity:0;
+   }
+   92% {
+     opacity:0;
+   }
+ }
+
+ @-ms-keyframes xfade {
+   17% {
+     opacity:1;
+   }
+   25% {
+     opacity:0;
+   }
+   92% {
+     opacity:0;
+   }
+ }
+
   &__logo {
     position: relative;
     z-index: 2;
 
     @include breakpoint($medium) {
       padding: 70px 250px;
+      padding-top: 150px;
+    };
+    @include breakpoint($between-small) {
+      padding: 70px 180px;
       padding-top: 150px;
     };
     @include breakpoint($small-only) {
