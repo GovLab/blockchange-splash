@@ -54,10 +54,6 @@ body {
         opacity: 1;
         transition: all .4s ease;
       }
-      @include breakpoint($large) {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
     }
   }
 }
