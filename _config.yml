@@ -16,7 +16,9 @@
 title: Blockchange
 email:
 description: > # this means to ignore newlines until "baseurl:"
-
+  Block-change (blɒk/-/tʃeɪndʒ/)
+  v.t using blockchain technologies for social change;
+  n. An initiative to examine whether and how blockchain technologies can be used for social change.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blockchan.ge" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
