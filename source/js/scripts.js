@@ -26,7 +26,8 @@ $(document).ready(function () {
       $(window).scrollTop(currentScroll);
     }
     // Modal Click Behavior
-    $('.js-open-modal').click(function () {
+    $('.js-open-modal').click(function (e) {
+        e.preventDefault();
         $(this).parent().find('.js-target-modal').addClass('js-active');
         currentScroll=$(window).scrollTop();
         $(window).bind('scroll',lockscroll);

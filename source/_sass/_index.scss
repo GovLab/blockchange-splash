@@ -319,6 +319,57 @@ ul {
     margin: 20px 0;
   }
 
+  .modal {
+
+    font-weight: 100;
+    padding: 80px;
+    background-color: $purple;
+    color: rgba(255,255,255,0.8);
+    box-shadow: none;
+    height: 80vh;
+    top: 10vh;
+
+    @include breakpoint($medium)      { height: 95vh; top: 5vh; width: 100%; left: 0; margin: 0; padding: 20px; }
+    @include breakpoint($small-only)  { height: 95vh; top: 5vh; width: 100%; left: 0; margin: 0; padding: 20px; }
+    @include breakpoint($large)       { height: 80vh; top: 10vh; width: 70%; left: 50%; margin: 0 0 0 -35%; padding: 80px; }
+
+    &__image {
+      border-radius: 50%;
+      float: left;
+      width: 180px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    &__text {
+      float: left;
+      margin-left: 40px;
+      width: 60%;
+      @include breakpoint($small-only) { margin-left: 0; width: 100%; }
+    }
+    &__close {
+      margin-top: -40px;
+      margin-right: -40px;
+      @include breakpoint($small-only) { margin: 0; }
+    }
+    &__title {
+      color: rgba(255,255,255,0.8);
+      text-transform: none;
+      font-weight: 100;
+      padding: 0;
+      font-size: 1.5rem;
+      border-bottom: 1px solid darken($light-yellow, 25%);
+    }
+    &__subtitle {
+      display: block;
+    }
+    &__description {
+      font-size: 0.9rem;
+      line-height: 1.2;
+      max-height: 45vh;
+      overflow-y: scroll;
+    }
+  }
+
 }
 
 .team-text {
