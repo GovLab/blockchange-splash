@@ -357,7 +357,9 @@ ul {
       font-weight: 100;
       padding: 0;
       font-size: 1.5rem;
-      border-bottom: 1px solid darken($light-yellow, 25%);
+      a:hover {
+        background-color: transparent;
+      }
     }
     &__subtitle {
       display: block;
@@ -365,8 +367,14 @@ ul {
     &__description {
       font-size: 0.9rem;
       line-height: 1.2;
-      max-height: 45vh;
+      max-height: 47vh;
       overflow-y: scroll;
+      a {
+        text-decoration: none;
+        &:hover {
+          background-color: transparent;
+        }
+      }
     }
   }
 
