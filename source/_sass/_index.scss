@@ -396,3 +396,21 @@ ul {
   font-size: 0.75rem;
   display: block;
 }
+
+
+
+.sticky {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+  .sticky__title {
+    font-size: 1.1rem;
+  }
+  p {
+    font-weight: 400;
+  }
+  img {
+    float: left;
+    width: 200px;
+    margin-right: 40px;
+  }
+}
