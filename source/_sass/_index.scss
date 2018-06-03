@@ -251,7 +251,21 @@ padding-right: 0;
     &:hover {
       text-decoration: none;
       background-color: darken($light-yellow, 15%);
-      border-bottom: 1px solid darken($light-yellow, 40%);
+      // border-bottom: 1px solid darken($light-yellow, 40%);
+    }
+  }
+  .button {
+    border-bottom: none;
+    background-color: transparent;
+    font-weight: 500;
+    border: 2px solid;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    &:hover {
+      background-color: $purple;
+      color: white;
+      border-color: $purple;
+      // transition: all .6s ease;
     }
   }
   .content {
@@ -261,6 +275,13 @@ padding-right: 0;
       @include breakpoint($small-only) {
       font-size: 1.8rem;
     }
+  }
+  &--align-center {
+    text-align: center;
+  }
+  &--padded {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   padding-left: 60px;
   padding-right: 60px;
@@ -296,20 +317,6 @@ ul {
       padding-bottom: 5px;
     }
 
-    .button {
-      border-bottom: none;
-      background-color: transparent;
-      font-weight: 500;
-      border: 2px solid;
-      margin-bottom: 5px;
-      padding: 5px 10px;
-      &:hover {
-        background-color: $purple;
-        color: white;
-        border-color: $purple;
-        // transition: all .6s ease;
-      }
-    }
   }
 }
 }
